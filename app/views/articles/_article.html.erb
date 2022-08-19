@@ -9,4 +9,7 @@
     <%= article.body %>
   </p>
 
+  <% article.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 100, width: 100, crop: :fill %>
+  <% end %>
 </div>
